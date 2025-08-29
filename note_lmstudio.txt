@@ -1,0 +1,6 @@
+# After downloading any new version, for example: LM-Studio-0.3.20-4-x64.AppImage
+# Run below commands
+
+chmod +x ./LM-Studio-0.3.20-4-x64.AppImage
+ln -s ./LM-Studio-0.3.20-4-x64.AppImage ./lmstudio_exe
+chmod +x ./lmstudio_exe
