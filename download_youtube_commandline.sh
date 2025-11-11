@@ -4,6 +4,7 @@
 
 # Remove old yt-dlp if needed
 rm ~/.local/bin/yt-dlp
+hash -r
 
 # Download the current nightly build
 sudo curl -L https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
@@ -22,7 +23,7 @@ yt-dlp --rm-cache-dir
 #------------- download youtube video -----------------#
 #------------------------------------------------------#
 
-yt-dlp --merge-output-format mp4 -f "bestvideo+bestaudio" -o "/home/longdpt/Videos/%(title)s.%(ext)s" https://youtu.be/m3PguKYQXAY
+yt-dlp --merge-output-format mp4 -f "bestvideo+bestaudio" -o "/home/longdpt/Videos/%(title)s.%(ext)s" "https://youtu.be/m3PguKYQXAY"
 
 # Download with output as .mp4
 # with bestvideo and bestaudio quality
@@ -38,6 +39,6 @@ yt-dlp --merge-output-format mp4 -f "bestvideo+bestaudio" -o "/home/longdpt/Vide
 python3 -m pip install secretstorage
 
 # Download with --cookies-from-browser [browser name]
-yt-dlp --cookies-from-browser brave --merge-output-format mp4 -f "bestvideo+bestaudio" -o "/home/longdpt/Videos/%(title)s.%(ext)s" https://www.youtube.com/watch?v=5zYBZi34bDo
+yt-dlp --cookies-from-browser brave --merge-output-format mp4 -f "bestvideo+bestaudio" -o "/home/longdpt/Videos/%(title)s.%(ext)s" "https://www.youtube.com/watch?v=5zYBZi34bDo"
 
 # --cookies-from-browser brave (brave is the browser name, if you google chrome => chrome)
