@@ -27,9 +27,9 @@ yt-dlp --merge-output-format mp4 -f "bestvideo+bestaudio" -o "/home/longdpt/Vide
 # Input url is: https://youtu.be/m3PguKYQXAY
 
 
-#----------------------------------------------------------------------------------------------#
-#------------- download youtube with some restrictions (like Age verification -----------------#
-#----------------------------------------------------------------------------------------------#
+#-----------------------------------------------------------------------------------------------#
+#------------- download youtube with some restrictions (like Age verification) -----------------#
+#-----------------------------------------------------------------------------------------------#
 
 # Install secretstorage to help bypass cookies
 python3 -m pip install secretstorage
