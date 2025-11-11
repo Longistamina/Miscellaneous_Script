@@ -2,6 +2,9 @@
 #------------- install yt-dlp -----------------#
 #----------------------------------------------#
 
+# Remove old yt-dlp if needed
+rm ~/.local/bin/yt-dlp
+
 # Download the current nightly build
 sudo curl -L https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 
