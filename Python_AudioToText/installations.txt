@@ -1,0 +1,16 @@
+# create conda env
+conda create -n inference python==3.12 -y
+conda activate inference
+
+# 1. Uninstall any standard PyTorch versions
+pip uninstall torch torchvision torchaudio -y
+
+# 2. Install the ROCm PyTorch wheels compiled specifically for gfx1151 (or order with nvidia)
+pip install --pre torch torchvision torchaudio --index-url https://rocm.nightlies.amd.com/v2/gfx1151/
+
+# 3. Install the remaining requirements for the model
+pip install "transformers>=5.3.0" librosa accelerate tqdm
+
+# Because librosa needs to pull audio out of a video container (.mp4), you must have ffmpeg installed on your operating system
+sudo apt install ffmpeg
+
