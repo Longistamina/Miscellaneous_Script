@@ -65,7 +65,7 @@ def process_audio(input_path, output_path, in_lang, out_lang):
         prompt_text = "Please transcribe the audio and output it with these keys: Start, End, Speaker, Content in JSON format."
 
     # --- CHUNKING LOGIC ---
-    chunk_duration_s = 900 # 15 minutes
+    chunk_duration_s = 600 # 10 minutes
     chunk_size = chunk_duration_s * sampling_rate
     total_chunks = (len(speech_array) + chunk_size - 1) // chunk_size
     

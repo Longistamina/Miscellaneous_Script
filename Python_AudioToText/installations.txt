@@ -9,8 +9,11 @@ pip uninstall torch torchvision torchaudio -y
 pip install --pre torch torchvision torchaudio --index-url https://rocm.nightlies.amd.com/v2/gfx1151/
 
 # 3. Install the remaining requirements for the model
-pip install "transformers>=5.3.0" librosa accelerate tqdm
+pip install "transformers>=5.3.0" librosa accelerate tqdm deep-translator
 
 # Because librosa needs to pull audio out of a video container (.mp4), you must have ffmpeg installed on your operating system
 sudo apt install ffmpeg
 
+# Demo run
+python3 Audio_to_text.py -i input.m4a -o output.txt -il Korean -ol English
+python3 translate_backup.py # Incase the output text is not English
