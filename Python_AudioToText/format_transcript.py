@@ -30,7 +30,7 @@ def clean_transcript(input_path, output_path, milestone_interval=60):
         try:
             data = json.loads(block)
             for item in data:
-                global_start = item["Start"] + (chunk_index * 300)
+                global_start = item["Start"] + (chunk_index * 600)
                 
                 all_dialogue.append({
                     "Start": global_start,

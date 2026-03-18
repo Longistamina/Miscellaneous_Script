@@ -79,8 +79,8 @@ def process_audio(input_path, output_path, in_lang, out_lang):
         prompt_text = "Please transcribe the audio and output it with these keys: Start, End, Speaker, Content in JSON format."
 
     # --- CHUNKING LOGIC ---
-    # Process the audio in 300-second chunks to save VRAM
-    chunk_duration_s = 300 
+    # Process the audio in 600-second chunks to save VRAM
+    chunk_duration_s = 600 
     chunk_size = chunk_duration_s * sampling_rate
     total_chunks = (len(speech_array) + chunk_size - 1) // chunk_size
     
@@ -105,7 +105,8 @@ def process_audio(input_path, output_path, in_lang, out_lang):
         with torch.no_grad():
             output_ids = model.generate(
                 **inputs,
-                max_new_tokens=4096 # This fixes the max_length/max_new_tokens warning
+                max_new_tokens=4096, 
+                max_length=None# This fixes the max_length/max_new_tokens warning
             )
 
         # Decode and store
