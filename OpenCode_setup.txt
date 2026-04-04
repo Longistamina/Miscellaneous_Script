@@ -1,0 +1,22 @@
+# 1. Install opencode:
+curl -fsSL https://opencode.ai/install | bash
+
+# 2. Refresh shel
+source ~/.bashrc
+
+# 3. Install Ollama and pull model (example: gemma4:31b)
+curl -fsSL https://ollama.com/install.sh | sh
+ollama pull gemma4:31b
+
+# 4. cd to the project directory and launch opencode
+cd /path/to/project
+opencode
+
+# 5. Connect to provider (ollama) inside opencode TUI (Terminal User Interface)
+/connect ollama
+
+# 6. Select model, then use the TUI to use it!!!
+/model gemma4:31b
+
+# 7. (OPTIONAL) use without TUI
+opencode run -m gemma4:31b "Refactor the authentication logic in auth.py to use JWT"
