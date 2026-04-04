@@ -16,7 +16,7 @@ opencode
 /connect ollama
 
 # 6. Select model, then use the TUI to use it!!!
-/model gemma4:31b
+/models gemma4:31b
 
 # 7. (OPTIONAL) use without TUI
 opencode run -m gemma4:31b "Refactor the authentication logic in auth.py to use JWT"
