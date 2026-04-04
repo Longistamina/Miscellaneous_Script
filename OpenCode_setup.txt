@@ -14,3 +14,38 @@ ollama launch opencode
 
 # 5. Select the downloaded model (gemma4:31b) then Enter to launch opencode TUI (terminal user interface)
 
+#-------------------------------------------------#
+#----------------- Other guides ------------------#
+#-------------------------------------------------#
+
+#############################
+## Enter to newline in TUI ##
+#############################
+
+Press Alt+Enter
+
+####################
+## Copy-Cut-Paste ##
+####################
+
+# Deactivate the "copy on highlight"
+## Method 1:
+export OPENCODE_EXPERIMENTAL_DISABLE_COPY_ON_SELECT=1
+source ~/.bashrc
+
+## Method 2:
+Open your global config file (usually located at ~/.config/opencode/opencode.json)
+add the setting under the tui block:
+{
+  "tui": {
+    "copy_on_select": false
+  }
+}
+
+# Then, use Ctrl+C/X/V like normal (or try Ctrl+Shift+C/X/V)
+
+########################
+## Select old session ##
+########################
+
+Insie opencode TUI, type "/sessions" and choose the session related to the old work you want to continue
