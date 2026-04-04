@@ -8,9 +8,9 @@ source ~/.bashrc
 curl -fsSL https://ollama.com/install.sh | sh
 ollama pull gemma4:31b
 
-# 4. cd to the project directory and launch opencode
+# 4. cd to the project directory and launch opencode (use ollama to launch)
 cd /path/to/project
-opencode
+ollama launch opencode
 
 # 5. Connect to provider (ollama) inside opencode TUI (Terminal User Interface)
 /connect ollama
