@@ -24,25 +24,20 @@ ollama launch opencode
 
 Press Alt+Enter
 
-####################
-## Copy-Cut-Paste ##
-####################
+################
+## Copy-Paste ##
+################
 
-# Deactivate the "copy on highlight"
-## Method 1:
-export OPENCODE_EXPERIMENTAL_DISABLE_COPY_ON_SELECT=1
-source ~/.bashrc
+# 1. Install xclip (ubuntu)
+sudo apt install xclip
 
-## Method 2:
-Open your global config file (usually located at ~/.config/opencode/opencode.json)
-add the setting under the tui block:
-{
-  "tui": {
-    "copy_on_select": false
-  }
-}
+# 2. Copy (in opencode TUI)
+Select/Highlight the body of you want to copy, then release the mouse
+-> It will automatically copy that selected text
 
-# Then, use Ctrl+C/X/V like normal (or try Ctrl+Shift+C/X/V)
+# 3. Paste (in opencode TUI)
+Ctrl+Shift+V
+(only work after installing xclip)
 
 ########################
 ## Select old session ##
