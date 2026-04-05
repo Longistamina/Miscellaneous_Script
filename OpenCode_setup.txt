@@ -42,6 +42,13 @@ Select/Highlight the body of you want to copy, then release the mouse
 Ctrl+Shift+V
 (only work after installing xclip)
 
+########################################
+## Recover prompt text using "revert" ##
+########################################
+
+# Click the message/promt -> choose "revert...." -> the prompt will be recovered in the input box
+# Or can use /undo command
+
 ########################
 ## Select old session ##
 ########################
