@@ -1,0 +1,3 @@
+sudo dnf install pandoc
+sudo dnf install texlive-scheme-medium # or weasyprint
+pandoc BashCheatSheet.md --pdf-engine=xelatex -V geometry:margin=1.0in -V papersize:a4 --wrap=auto -V fontsize=10pt -o BashCheatSheet.pdf
