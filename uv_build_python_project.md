@@ -254,8 +254,8 @@ typeCheckingMode = "standard"
 Run individual checks:
 
 ```bash
-uv run pytest
-uv run pytest --cov=tidypyrs --cov-report=term-missing
+uv run python -m pytest
+uv run python -m pytest --cov=tidypyrs --cov-report=term-missing
 uv run ruff check .
 uv run ruff check . --fix
 uv run ruff format .
@@ -270,7 +270,7 @@ uv lock --check
 uv run ruff format . --check
 uv run ruff check .
 uv run pyright
-uv run pytest --cov=tidypyrs --cov-report=term-missing
+uv run python -m pytest --cov=tidypyrs --cov-report=term-missing
 ```
 
 
@@ -611,7 +611,7 @@ uv lock --check
 uv run ruff format . --check
 uv run ruff check .
 uv run pyright
-uv run pytest --cov=tidypyrs --cov-report=term-missing
+uv run python -m pytest --cov=tidypyrs --cov-report=term-missing
 uv run --group docs mkdocs build --strict
 git status
 ```
@@ -871,7 +871,7 @@ tag, TestPyPI artifacts, and PyPI artifacts should describe the same release.
 ```bash
 git switch main
 git pull --ff-only
-git switch -c feature/new-capability
+git switch -c dev
 ```
 
 Update source, tests, README, API documentation, and notebooks together. Run:
@@ -881,16 +881,16 @@ uv sync --all-groups
 uv run ruff format .
 uv run ruff check .
 uv run pyright
-uv run pytest --cov=tidypyrs --cov-report=term-missing
+uv run python -m pytest --cov=tidypyrs --cov-report=term-missing
 uv run --group docs mkdocs build --strict
 ```
 
-Commit and push the feature:
+Commit and push the feature as a Pull Request:
 
 ```bash
 git add .
 git commit -m "Add new capability"
-git push -u origin feature/new-capability
+git push -u origin dev
 ```
 
 Review and merge it before preparing another release.
@@ -933,7 +933,7 @@ uv lock --check
 uv run ruff format . --check
 uv run ruff check .
 uv run pyright
-uv run pytest --cov=tidypyrs --cov-report=term-missing
+uv run python -m pytest --cov=tidypyrs --cov-report=term-missing
 uv run --group docs mkdocs build --strict
 
 uv build --no-sources --out-dir release/0.1.1
