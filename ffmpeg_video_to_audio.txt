@@ -1,0 +1,12 @@
+
+# Install ffmpeg first:
+sudo dnf install ffmpeg
+
+# Replace input.mp4 with your video’s filename. -vn skips the video, and -c:a copy keeps the original audio quality.
+ffmpeg -i input.mp4 -vn -c:a copy output.m4a
+
+# If that fails because the audio codec can’t be stored in an M4A file, convert it to AAC instead:
+ffmpeg -i input.mp4 -vn -c:a aac -b:a 192k output.m4a
+
+
+
